@@ -7,7 +7,7 @@ pipeline {
     }
     environment {
         SCANNER_HOME= tool 'sonarqube-scanner'
-        APP_NAME = "SIPCalculator"
+        APP_NAME = "sipcalculator"
         RELEASE = "1.0.0"
         DOCKER_USER = "anilpatil46"
         DOCKER_PASS = 'docker_cred'
