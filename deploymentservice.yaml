@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment # Kubernetes resource kind we are creating
+metadata:
+  name: sip-calculator-deployment
+spec:
+  selector:
+    matchLabels:
+      app: sip-calculator
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: sip-calculator
+    spec:
+      containers:
+        - name: sip-calculator
+          image: chandan374/java11_maven
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: sip-calculator-k8ssvc
+spec:
+  selector:
+    app: sip-calculator
+  ports:
+    - port: 8080
+      targetPort: 8080
+  type: LoadBalancer 
