@@ -26,7 +26,7 @@ pipeline {
 
         stage('Git checkout') {
             steps {
-                git branch: 'master', changelog: false, poll: false, url: 'https://github.com/anilpatil46/SIPCalculator.git'
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/anilpatil46/SIPCalculator.git'
             }
         }
         
