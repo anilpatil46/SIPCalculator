@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: sip-calculator
-          image: chandan374/java11_maven
+          image: anilpatil46/sipcalculator1:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
