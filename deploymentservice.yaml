@@ -17,7 +17,7 @@ spec:
           image: anilpatil46/sipcalculator1:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8080
+            - containerPort: 8186
 
 ---
 
@@ -29,6 +29,6 @@ spec:
   selector:
     app: sip-calculator
   ports:
-    - port: 8080
-      targetPort: 8080
+    - port: 8186
+      targetPort: 8186
   type: LoadBalancer 
